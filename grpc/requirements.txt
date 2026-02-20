@@ -5,3 +5,4 @@ Pillow
 pyzbar
 python-dateutil
 aiomysql
+sqlalchemy
