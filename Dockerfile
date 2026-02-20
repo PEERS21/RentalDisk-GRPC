@@ -8,10 +8,10 @@ COPY . .
 RUN git clone https://github.com/PEERS21/Common-python.git /app/common
 
 RUN pip install --upgrade pip setuptools wheel \
- && pip install --no-cache-dir -r common/requirements.txt -r grpc/requirements.txt \
+ && pip install --no-cache-dir -r common/requirements.txt -r grpc_proto/requirements.txt \
  && pip uninstall -y redis || true \
  && pip install --no-cache-dir "redis==7.2.0"
 
 EXPOSE 50051
 
-CMD ["python", "-m", "grpc.server"]
+CMD ["python", "-m", "grpc_proto.server"]
