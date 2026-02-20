@@ -8,8 +8,8 @@ import grpc
 from sqlalchemy import select
 
 # protobuf imports (после генерации pb-файлов)
-import grpc.qr_pb2 as pb2
-import grpc.qr_pb2_grpc as pb2_grpc
+import grpc_proto.qr_pb2 as pb2
+import grpc_proto.qr_pb2_grpc as pb2_grpc
 
 # async redis
 import redis.asyncio as aioredis
